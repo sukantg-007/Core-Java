@@ -1,0 +1,60 @@
+Applet loading
+Applet instantiation
+Applet initialization -----public void init();
+Applet start --------------public void start();
+Applet stop --------------public void stop();
+Applet distroy --------------public void distroy();
+
+
+I> Define applet class:
+
+class MyFrame extends Frame implements ActionListener
+{
+	MyFrame()
+	{
+		properties of frame
+	}
+
+	public void actionPerformed(ActionEvent ae)
+	{
+
+	}
+}
+
+abc.java
+class MyFrame extends Applet implements ActionListener
+{
+	public void init()
+	{
+		properties of frame
+	}
+	public void actionPerformed(ActionEvent ae)
+	{
+
+	}
+}
+/*
+<applet code="MyApplet" width="400" height="400">
+	</applet>
+*/
+II> Applet configuration:
+
+	<applet code="MyApplet" width="400" height="400">
+	</applet>
+
+	not any restriction for this tag to include in any file.
+
+	MyApplet.html
+	<applet code="MyApplet" width="400" height="400">
+	</applet>
+
+
+
+
+III> Execution of Applet
+1. By using browser
+	-- MyApplet.html
+	--new browser does not support applet..it is deprecated part of core java	
+2. By using appletviewer command
+	-- appletviewer MyApplet.html
+	-- appletviewer abc.java

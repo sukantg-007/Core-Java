@@ -1,0 +1,73 @@
+Memory is divide into two type:
+1. static:
+	-allocated at compile
+	- it is fixed in nature
+	e.g int a[10]----> 20 bytes
+	- infuture what program needs to store temp data for program need only
+	- static memory is deallocted/ deleted by os itselft
+	- for static memory allocation we do not need pointer because it is manage by compiler
+	- static uses stack memory to store
+
+2. dynamic: 
+	- allocated at the run time/ execution
+	- for achieving dynamic memory allocation c prodives stdlib.h
+	- dynamic memory is not fixed it can be vary regarding about user need
+	- we can decrease or increase size of dynamic memory
+	- for achieving dynamic memory we need to use pointers.
+	- dynamic we use heap memory
+
+we use fuctions explicitly to achieve dynamic memory allocation
+1. malloc-- to allocation for memory of any datatype
+2. calloc -- to allocate memory of array
+3. realloc-- to decrease or increase size of any array we use
+4. free-- to delete the memory block created by above functions
+
+1. malloc:
+	-to allocate memory for any data types
+	-prototye:
+	void* malloc(size_t size);
+
+	void*  ---address reture which does not have any data type
+		we need to type cast to the respective type which we need to store
+		
+		(int*)
+
+	size_t-- any unsigned int...any positive number
+
+	Q. create a variable accept int values
+
+	int *ptr;
+
+	ptr=(int*)malloc(sizeof(int));
+
+	Q. create a array of int dynamically
+	
+	int *ptr;
+
+	ptr=(int*)malloc(sizeof(int)*4);
+
+
+2. calloc--
+	- it is used to create memory block for array
+	prototype:
+	void* calloc(size_t noofelements, size_t size);
+
+	void* ---
+	size_t --unsingned int
+	
+	e.g
+
+	int *ptr;
+
+	ptr=(int*)calloc(5, sizeof(int));
+
+3. realloc--
+	it is used to increase or decrease size of any array dyanamic
+	prototype:
+	void* realloc(ptr,size_t size);
+	e.g ptr=(int*)realloc(ptr,sizeof(int)*7);
+
+
+4. free:
+	it is used to deallocate the memory which is allocated by the pointer
+	free(pointer);

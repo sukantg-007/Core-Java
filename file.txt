@@ -1,0 +1,16 @@
+File handling ---java.io.*;
+Constructor:
+File f=new File(String name);
+File f=new File(String subDir, String name);
+File f=new File(File f, String name);
+
+
+Methods:
+public boolean exists()
+public boolean createNewFile()
+public boolean mkdir()
+public String[] list()
+public boolean isFile()
+public boolean isDirectory()
+public boolean delete()
+public long length()
